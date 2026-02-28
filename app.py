@@ -95,7 +95,7 @@ with profile_col:
             f"Product = 45% weighted PR score + 25% lines + 15% issues + 15% bugfixes\n\n"
             f"PR formula: every PR x (type {{feature/bugfix:1.0, refactor:0.6, infra:0.4, chore/docs:0.25}} "
             f"x impact {{high:3, med:1.5, low:1}})"
-            f"Impact classified by LLM using PR title, description, and file paths.\n\n"
+            f" Impact classified by LLM using PR title, description, and file paths.\n\n"
             f"{name} WEIGHTED PR SCORE = {wpi}"
             f"{wpi_detail}\n\n"
             f"LINES CHANGED = {lines} -> ln(1+{lines}) = {math.log(1+lines):.1f}, capped at 1000/PR\n\n"
