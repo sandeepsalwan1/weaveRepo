@@ -51,16 +51,19 @@ with profile_col:
         )
 
     with dc:
+        prod_c = selected["product_score"] * 0.50
+        own_c = selected["ownership_score"] * 0.20
+        coll_c = selected["collaboration_score"] * 0.30
         fig = go.Figure(go.Pie(
-            labels=["Product", "Ownership", "Collaboration"],
-            values=[selected["product_score"] * 0.50,
-                    selected["ownership_score"] * 0.20,
-                    selected["collaboration_score"] * 0.30],
+            labels=["Prod", "Own", "Collab"],
+            values=[prod_c, own_c, coll_c],
             hole=0.55, marker_colors=["#3b82f6", "#f59e0b", "#10b981"],
-            textinfo="label+percent", textfont_size=11,
-            hovertemplate="%{label}: %{value:.2f}<extra></extra>",
+            textinfo="label+percent", textfont_size=10,
+            textposition="inside",
+            hovertemplate="%{label}: %{value:.3f}<extra></extra>",
+            sort=False,
         ))
-        fig.update_layout(margin=dict(l=0, r=0, t=0, b=0), height=170, showlegend=False)
+        fig.update_layout(margin=dict(l=5, r=5, t=5, b=5), height=175, showlegend=False)
         st.plotly_chart(fig, use_container_width=True)
 
     with mc:
@@ -91,29 +94,29 @@ with profile_col:
         prod_tip = (
             f"Product = 45% weighted PR score + 25% lines + 15% issues + 15% bugfixes\n\n"
             f"PR formula: every PR x (type {{feature/bugfix:1.0, refactor:0.6, infra:0.4, chore/docs:0.25}} "
-            f"x impact {{high:3, med:1.5, low:1}})\n"
+            f"x impact {{high:3, med:1.5, low:1}})\n\n"
             f"Impact classified by LLM using PR title, description, and file paths.\n\n"
-            f"{name} WEIGHTED PR SCORE = {wpi}\n"
+            f"{name} WEIGHTED PR SCORE = {wpi}\n\n"
             f"{wpi_detail}\n\n"
-            f"ISSUES CLOSED = {iss}\n"
-            f"LINES CHANGED = {lines} -> ln(1+{lines}) = {math.log(1+lines):.1f}, capped at 1000/PR\n"
+            f"ISSUES CLOSED = {iss}\n\n"
+            f"LINES CHANGED = {lines} -> ln(1+{lines}) = {math.log(1+lines):.1f}, capped at 1000/PR\n\n"
             f"BUGFIXES = {bugs}, LLM-classified"
         )
 
         own_tip = (
             f"Ownership = 40% dirs + 25% complex PRs + 20% areas + 15% self-closed issues\n\n"
-            f"{name} OWNERSHIP BREAKDOWN\n"
-            f"DIRECTORIES = {dirs} -> ln(1+{dirs}) = {math.log(1+dirs):.1f}\n"
-            f"COMPLEX PRS = {cplx} (PRs with 10+ changed files)\n"
-            f"PRODUCT AREAS = {areas} (distinct LLM-assigned areas)\n"
+            f"{name} OWNERSHIP BREAKDOWN\n\n"
+            f"DIRECTORIES = {dirs} -> ln(1+{dirs}) = {math.log(1+dirs):.1f}\n\n"
+            f"COMPLEX PRS = {cplx} (PRs with 10+ changed files)\n\n"
+            f"PRODUCT AREAS = {areas} (distinct LLM-assigned areas)\n\n"
             f"SELF-CLOSED ISSUES = {self_iss}"
         )
 
         coll_tip = (
             f"Collaboration = 45% reviews + 30% comments + 25% teammates\n\n"
-            f"{name} COLLABORATION BREAKDOWN\n"
-            f"REVIEWS GIVEN = {revs} (on others' PRs, self-reviews excluded)\n"
-            f"REVIEW COMMENTS = {rcmt} (body > 10 chars)\n"
+            f"{name} COLLABORATION BREAKDOWN\n\n"
+            f"REVIEWS GIVEN = {revs} (on others' PRs, self-reviews excluded)\n\n"
+            f"REVIEW COMMENTS = {rcmt} (body > 10 chars)\n\n"
             f"TEAMMATES REVIEWED = {ppl} (distinct PR authors reviewed)"
         )
 
