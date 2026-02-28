@@ -73,8 +73,10 @@ def compute_raw_metrics(prs, reviews, review_comments, issues):
         m["merged_prs"] += 1
         m["capped_lines_changed"] += min(pr["additions"] + pr["deletions"], 1000)
 
-        # Bugfix: any label containing "bug"
-        if any("bug" in label.lower() for label in pr.get("labels", [])):
+        # Bugfix: use LLM pr_type if available, fall back to GitHub labels
+        is_bugfix = pr.get("pr_type") == "bugfix" if "pr_type" in pr else \
+            any("bug" in label.lower() for label in pr.get("labels", []))
+        if is_bugfix:
             m["bugfix_prs"] += 1
 
         # Dirs touched: first path segment
@@ -129,25 +131,190 @@ def compute_raw_metrics(prs, reviews, review_comments, issues):
     return metrics
 
 
-# ── Temp main for sanity checking ──
+# ── Impact Scores ─────────────────────────────────────────────────
+
+TYPE_MULT = {"feature": 1.0, "bugfix": 1.0, "refactor": 0.6, "infra": 0.4,
+             "chore": 0.25, "docs": 0.25, "unknown": 0.3}
+IMPACT_MULT = {"high": 3.0, "medium": 1.5, "low": 1.0}
+
+
+def _norm(values):
+    """Normalize a list of numbers to 0-1 by dividing by max."""
+    mx = max(values) if values else 0
+    return [v / mx for v in values] if mx else [0.0] * len(values)
+
+
+def compute_impact_scores(raw_metrics, enriched_prs):
+    """Per-PR contribution scoring -> product/ownership/collaboration/overall.
+
+    Returns sorted list of engineer score dicts.
+    """
+    # ── Step 1: Per-PR contribution scores summed per engineer ──
+    pr_stats = {}
+    for pr in enriched_prs:
+        author = pr["author"]
+        if author not in pr_stats:
+            pr_stats[author] = {
+                "weighted_pr_impact": 0.0,
+                "high_impact_prs": 0,
+                "areas": set(),
+                "area_freq": Counter(),
+            }
+        s = pr_stats[author]
+        pr_type = pr.get("pr_type", "unknown")
+        impact = pr.get("impact_level", "medium")
+        area = pr.get("area", "unknown")
+
+        s["weighted_pr_impact"] += TYPE_MULT.get(pr_type, 0.3) * IMPACT_MULT.get(impact, 1.0)
+        if impact == "high":
+            s["high_impact_prs"] += 1
+        s["areas"].add(area)
+        s["area_freq"][area] += 1
+
+    # ── Filter: >= 1 merged PR or >= 5 reviews given ──
+    eligible = {
+        eng: m for eng, m in raw_metrics.items()
+        if m["merged_prs"] >= 1 or m["reviews_given"] >= 5
+    }
+    engineers = list(eligible.keys())
+
+    def ps(eng, field):
+        return pr_stats.get(eng, {}).get(field, 0)
+
+    def ps_set_len(eng, field):
+        v = pr_stats.get(eng, {}).get(field, set())
+        return len(v) if isinstance(v, set) else 0
+
+    # ── Step 2-4: Gather sub-metric arrays and normalize ──
+    # Product
+    weighted_impact = [ps(e, "weighted_pr_impact") for e in engineers]
+    log_lines = [math.log(1 + eligible[e]["capped_lines_changed"]) for e in engineers]
+    issues_closed = [eligible[e]["issues_closed"] for e in engineers]
+    bugfix_counts = [eligible[e]["bugfix_prs"] for e in engineers]
+
+    n_wpi = _norm(weighted_impact)
+    n_lines = _norm(log_lines)
+    n_issues = _norm(issues_closed)
+    n_bugs = _norm(bugfix_counts)
+
+    # Ownership (log dirs to compress 29 vs 10 gap)
+    log_dirs = [math.log(1 + eligible[e]["unique_dirs_touched"]) for e in engineers]
+    complex_prs = [eligible[e]["complex_prs"] for e in engineers]
+    areas_touched = [ps_set_len(e, "areas") for e in engineers]
+    self_issues = [eligible[e]["self_opened_issues_closed"] for e in engineers]
+
+    n_dirs = _norm(log_dirs)
+    n_complex = _norm(complex_prs)
+    n_areas = _norm(areas_touched)
+    n_self = _norm(self_issues)
+
+    # Collaboration
+    reviews_given = [eligible[e]["reviews_given"] for e in engineers]
+    review_comments = [eligible[e]["review_comments_written"] for e in engineers]
+    people_reviewed = [eligible[e]["distinct_people_reviewed"] for e in engineers]
+
+    n_revs = _norm(reviews_given)
+    n_rcmt = _norm(review_comments)
+    n_ppl = _norm(people_reviewed)
+
+    # ── Step 5: Compute scores ──
+    results = []
+    for i, eng in enumerate(engineers):
+        product = 0.45 * n_wpi[i] + 0.25 * n_lines[i] + 0.15 * n_issues[i] + 0.15 * n_bugs[i]
+        ownership = 0.40 * n_dirs[i] + 0.25 * n_complex[i] + 0.20 * n_areas[i] + 0.15 * n_self[i]
+        collab = 0.45 * n_revs[i] + 0.30 * n_rcmt[i] + 0.25 * n_ppl[i]
+        overall = 0.50 * product + 0.20 * ownership + 0.30 * collab
+
+        pst = pr_stats.get(eng, {})
+        dominant_area = pst.get("area_freq", Counter()).most_common(1)
+        dominant_area = dominant_area[0][0] if dominant_area else "unknown"
+
+        m = eligible[eng]
+        results.append({
+            "engineer": eng,
+            "impact_score": round(overall, 3),
+            "product_score": round(product, 3),
+            "ownership_score": round(ownership, 3),
+            "collaboration_score": round(collab, 3),
+            "merged_prs": m["merged_prs"],
+            "capped_lines_changed": m["capped_lines_changed"],
+            "bugfix_prs": m["bugfix_prs"],
+            "issues_closed": m["issues_closed"],
+            "unique_dirs_touched": m["unique_dirs_touched"],
+            "complex_prs": m["complex_prs"],
+            "self_opened_issues_closed": m["self_opened_issues_closed"],
+            "reviews_given": m["reviews_given"],
+            "review_comments_written": m["review_comments_written"],
+            "distinct_people_reviewed": m["distinct_people_reviewed"],
+            "dominant_area": dominant_area,
+            "weighted_pr_impact": round(ps(eng, "weighted_pr_impact"), 1),
+            "high_impact_prs": ps(eng, "high_impact_prs"),
+            "areas_touched": ps_set_len(eng, "areas"),
+        })
+
+    results.sort(key=lambda x: x["impact_score"], reverse=True)
+    return results
+
+
+# ── Main ──
 
 if __name__ == "__main__":
-    prs = json.load(open("data/raw_prs.json"))
+    enriched = json.load(open("data/enriched_prs.json"))
     reviews = json.load(open("data/raw_reviews.json"))
     review_comments = json.load(open("data/raw_review_comments.json"))
     issues = json.load(open("data/raw_issues.json"))
 
-    metrics = compute_raw_metrics(prs, reviews, review_comments, issues)
+    raw_metrics = compute_raw_metrics(enriched, reviews, review_comments, issues)
+    scores = compute_impact_scores(raw_metrics, enriched)
 
-    print(f"Total engineers: {len(metrics)}\n")
-    print("Top 10 by merged_prs:")
-    print(f"{'Engineer':<30} {'PRs':>5} {'Lines':>7} {'Bugs':>5} {'Issues':>6} "
-          f"{'Dirs':>5} {'Cplx':>5} {'Revs':>5} {'RvCmt':>6} {'Ppl':>4}")
-    print("-" * 95)
+    with open("data/engineer_scores.json", "w") as f:
+        json.dump(scores, f, indent=2)
 
-    top = sorted(metrics.items(), key=lambda x: x[1]["merged_prs"], reverse=True)[:10]
-    for eng, m in top:
-        print(f"{eng:<30} {m['merged_prs']:>5} {m['capped_lines_changed']:>7} "
-              f"{m['bugfix_prs']:>5} {m['issues_closed']:>6} {m['unique_dirs_touched']:>5} "
-              f"{m['complex_prs']:>5} {m['reviews_given']:>5} "
-              f"{m['review_comments_written']:>6} {m['distinct_people_reviewed']:>4}")
+    print(f"Scored {len(scores)} engineers\n")
+
+    header = (
+        f"{'#':<3} {'Engineer':<22} {'Impact':>6} {'Prod':>5} {'Own':>5} {'Coll':>5} "
+        f"{'WPI':>6} {'PRs':>4} {'Bug':>4} {'Hi':>3} "
+        f"{'Lines':>6} {'Iss':>4} {'Dirs':>4} {'Cplx':>4} {'Areas':>5} {'Self':>4} "
+        f"{'Revs':>5} {'RvCm':>5} {'Ppl':>4} {'Area'}"
+    )
+    print(header)
+    print("-" * len(header))
+    for i, s in enumerate(scores[:15], 1):
+        print(
+            f"{i:<3} {s['engineer']:<22} "
+            f"{s['impact_score']:>6.3f} {s['product_score']:>5.3f} "
+            f"{s['ownership_score']:>5.3f} {s['collaboration_score']:>5.3f} "
+            f"{s['weighted_pr_impact']:>6.1f} {s['merged_prs']:>4} {s['bugfix_prs']:>4} "
+            f"{s['high_impact_prs']:>3} "
+            f"{s['capped_lines_changed']:>6} {s['issues_closed']:>4} "
+            f"{s['unique_dirs_touched']:>4} {s['complex_prs']:>4} "
+            f"{s['areas_touched']:>5} {s['self_opened_issues_closed']:>4} "
+            f"{s['reviews_given']:>5} {s['review_comments_written']:>5} "
+            f"{s['distinct_people_reviewed']:>4} {s['dominant_area']}"
+        )
+
+    print(f"\n{'='*60}")
+    print("SANITY CHECKS")
+    print(f"{'='*60}")
+    top5 = scores[:5]
+    gap = top5[0]["impact_score"] - top5[4]["impact_score"]
+    print(f"\nScore range (top 5): {top5[0]['impact_score']:.3f} — {top5[4]['impact_score']:.3f}  (gap: {gap:.3f})")
+    print(f"Score range (all):   {scores[0]['impact_score']:.3f} — {scores[-1]['impact_score']:.3f}")
+
+    print("\nBalance check — top 5:")
+    for i, s in enumerate(top5, 1):
+        flags = []
+        if s["merged_prs"] < 5: flags.append(f"LOW PRs ({s['merged_prs']})")
+        if s["reviews_given"] < 5: flags.append(f"LOW reviews ({s['reviews_given']})")
+        if s["collaboration_score"] < 0.05 or s["product_score"] < 0.05: flags.append("LOPSIDED")
+        status = ", ".join(flags) if flags else "OK"
+        print(f"  #{i} {s['engineer']:<22} PRs={s['merged_prs']:<4} Revs={s['reviews_given']:<4} "
+              f"Bugs={s['bugfix_prs']:<4} WPI={s['weighted_pr_impact']:<6} -> {status}")
+
+    print("\nOutlier check — top 10 with < 3 PRs:")
+    found = [s for s in scores[:10] if s["merged_prs"] < 3]
+    if not found:
+        print("  None — all top 10 have 3+ PRs")
+    for s in found:
+        print(f"  {s['engineer']} has {s['merged_prs']} PRs (score={s['impact_score']:.3f})")
