@@ -155,7 +155,7 @@ with profile_col:
     if eng_prs:
         render_pr(eng_prs[0])
         if len(eng_prs) > 1:
-            with st.expander(f"{min(len(eng_prs)-1, 2)} more PRs"):
+            with st.expander(f"{min(len(eng_prs)-1, 2)} more Impactful PRs"):
                 for pr in eng_prs[1:3]:
                     render_pr(pr)
 
