@@ -1,0 +1,3181 @@
+[
+  {
+    "number": 24772,
+    "title": "Why are numeric property filters limited to `>` and `<`, not also `>=` and `>=`?",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "aseemk",
+    "closed_at": "2026-02-27T21:07:32Z",
+    "closed_by": "darkopia"
+  },
+  {
+    "number": 48180,
+    "title": "Group key and name are hardcoded positionally in code, but column config lets them be moved",
+    "labels": [
+      "bug",
+      "feature/group-analytics",
+      "team/customer-analytics"
+    ],
+    "author": "kyleswank",
+    "closed_at": "2026-02-27T15:04:18Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 48911,
+    "title": "Bug: full screen view of a replay broken when browser window not full screen",
+    "labels": [
+      "bug",
+      "feature/replay",
+      "team/session-replay"
+    ],
+    "author": "clr182",
+    "closed_at": "2026-02-27T14:27:18Z",
+    "closed_by": "fasyy612"
+  },
+  {
+    "number": 47722,
+    "title": "API for creating cohorts doesn't validate value for since operator",
+    "labels": [
+      "bug",
+      "feature/cohorts",
+      "team/flags-platform"
+    ],
+    "author": "haacked",
+    "closed_at": "2026-02-27T13:46:33Z",
+    "closed_by": "patricio-posthog"
+  },
+  {
+    "number": 48815,
+    "title": "Improve flag filters validation to prevent invalid filters",
+    "labels": [
+      "bug",
+      "feature/feature-flags",
+      "team/flags-platform"
+    ],
+    "author": "haacked",
+    "closed_at": "2026-02-27T13:38:15Z",
+    "closed_by": "patricio-posthog"
+  },
+  {
+    "number": 15554,
+    "title": "[Bug] Save as cohort on lifecycle persons doesn't work",
+    "labels": [
+      "bug",
+      "feature/cohorts",
+      "team/feature-flags"
+    ],
+    "author": "liyiy",
+    "closed_at": "2026-02-26T22:04:59Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 20750,
+    "title": "Cohorts: treat created_at as a date",
+    "labels": [
+      "bug",
+      "enhancement",
+      "feature/cohorts",
+      "team/feature-flags",
+      "backlog"
+    ],
+    "author": "jurajmajerik",
+    "closed_at": "2026-02-26T22:04:56Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 37774,
+    "title": "Bug report: Error when adding > 1 cohort to breakdown on Trends insight",
+    "labels": [
+      "bug",
+      "feature/cohorts",
+      "feature/trends",
+      "team/product-analytics"
+    ],
+    "author": "slshults",
+    "closed_at": "2026-02-26T22:04:54Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 29896,
+    "title": "Feature request (cohorts): Return an error to the user when cohorts fail/can't be calculated",
+    "labels": [
+      "enhancement",
+      "feature/cohorts",
+      "team/feature-flags"
+    ],
+    "author": "Sriram-bk",
+    "closed_at": "2026-02-26T22:04:52Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 6299,
+    "title": "Allow event property filters when creating a cohort",
+    "labels": [
+      "enhancement",
+      "feature/cohorts",
+      "feature/actions",
+      "team/feature-flags"
+    ],
+    "author": "joelmatch",
+    "closed_at": "2026-02-26T21:45:58Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 20204,
+    "title": "Query session activity data in dynamic cohorts",
+    "labels": [
+      "enhancement",
+      "feature/cohorts",
+      "team/feature-flags",
+      "backlog"
+    ],
+    "author": "pauldambra",
+    "closed_at": "2026-02-26T21:45:56Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 34232,
+    "title": "Cannot create dynamic cohorts with people using the app more than N amount of hours. Can't add people manually either",
+    "labels": [
+      "enhancement",
+      "feature/cohorts",
+      "team/feature-flags"
+    ],
+    "author": "eddsaura",
+    "closed_at": "2026-02-26T21:45:54Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 43654,
+    "title": "Cohorts where $session_duration is the only filter",
+    "labels": [
+      "enhancement",
+      "feature/cohorts",
+      "team/feature-flags"
+    ],
+    "author": "borohhov",
+    "closed_at": "2026-02-26T21:45:51Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 28349,
+    "title": "Feature request: Add calendar UI for 'DateTime' person property filters in dynamic cohorts",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "feature/cohorts",
+      "team/feature-flags"
+    ],
+    "author": "slshults",
+    "closed_at": "2026-02-26T21:45:42Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 26785,
+    "title": "In Cohort creation allow date filters like last x days on person properties.",
+    "labels": [
+      "enhancement",
+      "feature/cohorts",
+      "team/feature-flags"
+    ],
+    "author": "darkopia",
+    "closed_at": "2026-02-26T21:45:40Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 25679,
+    "title": "Refer to dates dynamically in creating cohorts",
+    "labels": [
+      "enhancement",
+      "feature/cohorts",
+      "team/feature-flags"
+    ],
+    "author": "kincal",
+    "closed_at": "2026-02-26T21:45:38Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 25114,
+    "title": "Feature request: allow cohorts to use 'in the last n days' as a timeframe",
+    "labels": [
+      "enhancement",
+      "feature/cohorts",
+      "team/feature-flags"
+    ],
+    "author": "abigailbramble",
+    "closed_at": "2026-02-26T21:45:36Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 19921,
+    "title": "Cohorts: Allow adding absolute date filters",
+    "labels": [
+      "enhancement",
+      "feature/cohorts",
+      "team/feature-flags",
+      "backlog"
+    ],
+    "author": "neilkakkar",
+    "closed_at": "2026-02-26T21:45:34Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 47752,
+    "title": "fix(flags): canonical log counter silently no-op in parallel eval path",
+    "labels": [
+      "team/flags-platform"
+    ],
+    "author": "matheus-vb",
+    "closed_at": "2026-02-26T18:34:00Z",
+    "closed_by": "matheus-vb"
+  },
+  {
+    "number": 46457,
+    "title": "chore(flags): Improve K8s probes to prevent pod churn during high load",
+    "labels": [
+      "feature/feature-flags",
+      "team/flags-platform"
+    ],
+    "author": "haacked",
+    "closed_at": "2026-02-26T18:16:06Z",
+    "closed_by": "haacked"
+  },
+  {
+    "number": 43792,
+    "title": "Ambiguity in feature flag enabled toggle",
+    "labels": [
+      "good first issue",
+      "team/feature-flags",
+      "ux"
+    ],
+    "author": "dustinbyrne",
+    "closed_at": "2026-02-26T17:08:58Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 46204,
+    "title": "feat(flags): prevent failed flag evaluations from overwriting cached values",
+    "labels": [
+      "enhancement",
+      "feature/feature-flags",
+      "team/flags-platform"
+    ],
+    "author": "matheus-vb",
+    "closed_at": "2026-02-25T19:16:27Z",
+    "closed_by": "matheus-vb"
+  },
+  {
+    "number": 30570,
+    "title": "feat(flags): Include flags omitted from /flags when evaluation fails",
+    "labels": [
+      "enhancement",
+      "feature/feature-flags",
+      "team/flags-platform"
+    ],
+    "author": "haacked",
+    "closed_at": "2026-02-25T19:15:40Z",
+    "closed_by": "matheus-vb"
+  },
+  {
+    "number": 46222,
+    "title": "feat(flags): Isolate DB query types to prevent cascading latency failures",
+    "labels": [
+      "enhancement",
+      "team/flags-platform"
+    ],
+    "author": "matheus-vb",
+    "closed_at": "2026-02-25T18:09:50Z",
+    "closed_by": "matheus-vb"
+  },
+  {
+    "number": 39751,
+    "title": "shopify source status",
+    "labels": [],
+    "author": "andrewjmcgehee",
+    "closed_at": "2026-02-25T17:05:12Z",
+    "closed_by": "andrewjmcgehee"
+  },
+  {
+    "number": 48920,
+    "title": "Pagination on endpoints",
+    "labels": [
+      "bug"
+    ],
+    "author": "sakce",
+    "closed_at": "2026-02-25T13:54:25Z",
+    "closed_by": "sakce"
+  },
+  {
+    "number": 46558,
+    "title": "Sprint - Feb 9 to Feb 22",
+    "labels": [
+      "sprint"
+    ],
+    "author": "pl",
+    "closed_at": "2026-02-25T09:43:26Z",
+    "closed_by": "marandaneto"
+  },
+  {
+    "number": 49017,
+    "title": "LLM Generation view displays $ai_input messages out of order",
+    "labels": [],
+    "author": "simon-archer",
+    "closed_at": "2026-02-25T08:55:00Z",
+    "closed_by": "simon-archer"
+  },
+  {
+    "number": 49014,
+    "title": "Bug: person.properties.X in HogQL funnel breakdown returns ingestion-time snapshot instead of current person property value",
+    "labels": [
+      "bug"
+    ],
+    "author": "ranjanrishikesh",
+    "closed_at": "2026-02-25T08:51:20Z",
+    "closed_by": "ranjanrishikesh"
+  },
+  {
+    "number": 40957,
+    "title": "Feature Request: Improve exception display for long values",
+    "labels": [
+      "enhancement",
+      "feature/error-tracking",
+      "team/error-tracking"
+    ],
+    "author": "ordehi",
+    "closed_at": "2026-02-24T21:30:00Z",
+    "closed_by": "rafaeelaudibert"
+  },
+  {
+    "number": 47703,
+    "title": "Changing operator from string operator to date operator should clear or validate value",
+    "labels": [
+      "bug",
+      "good first issue",
+      "feature/feature-flags",
+      "team/feature-flags"
+    ],
+    "author": "haacked",
+    "closed_at": "2026-02-24T19:02:18Z",
+    "closed_by": "charlescook-ph"
+  },
+  {
+    "number": 47489,
+    "title": "Create flow visualization for funnels insights",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2026-02-24T18:11:27Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 39746,
+    "title": "Feature request: Show retention trend line for a specific day/week/month",
+    "labels": [
+      "enhancement",
+      "feature/retention",
+      "team/product-analytics",
+      "feature/insights"
+    ],
+    "author": "slshults",
+    "closed_at": "2025-12-04T19:27:15Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 47640,
+    "title": "chore(flags): Clean up legacy flag filters without groups",
+    "labels": [
+      "bug",
+      "feature/feature-flags",
+      "team/flags-platform"
+    ],
+    "author": "haacked",
+    "closed_at": "2026-02-24T12:23:32Z",
+    "closed_by": "patricio-posthog"
+  },
+  {
+    "number": 46075,
+    "title": "Last seen column in persons list",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2026-02-23T15:07:28Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 45275,
+    "title": "Bug: Insights - Trends tooltip overflow out of screen",
+    "labels": [
+      "bug",
+      "team/product-analytics",
+      "feature/insights"
+    ],
+    "author": "gesh",
+    "closed_at": "2026-02-23T12:26:57Z",
+    "closed_by": "gesh"
+  },
+  {
+    "number": 33636,
+    "title": "`/flags` post-launch checklist",
+    "labels": [
+      "feature/feature-flags",
+      "team/flags-platform"
+    ],
+    "author": "dmarticus",
+    "closed_at": "2026-02-22T23:51:28Z",
+    "closed_by": "haacked"
+  },
+  {
+    "number": 48338,
+    "title": "product tours - draft system",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "adboio",
+    "closed_at": "2026-02-21T00:55:42Z",
+    "closed_by": "adboio"
+  },
+  {
+    "number": 48349,
+    "title": "product tours - AI generated content",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "adboio",
+    "closed_at": "2026-02-20T20:35:54Z",
+    "closed_by": "adboio"
+  },
+  {
+    "number": 19476,
+    "title": "Copy / Move dashboards across projects",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "MarconLP",
+    "closed_at": "2026-02-20T14:02:15Z",
+    "closed_by": "ReeceJones"
+  },
+  {
+    "number": 29267,
+    "title": "Feature Request: Cross-project and cross-instance dashboard/insight copying capability",
+    "labels": [
+      "enhancement",
+      "feature/dashboards",
+      "feature/insights",
+      "team/analytics-platform"
+    ],
+    "author": "HaynesPostHog",
+    "closed_at": "2026-02-20T14:03:52Z",
+    "closed_by": "ReeceJones"
+  },
+  {
+    "number": 47244,
+    "title": "feat(llma): sentiment classification for LLM Analytics",
+    "labels": [
+      "team/llm-analytics"
+    ],
+    "author": "andrewm4894",
+    "closed_at": "2026-02-20T12:08:04Z",
+    "closed_by": "andrewm4894"
+  },
+  {
+    "number": 48130,
+    "title": "Product Tours - configurable 'dismiss on click outside'",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "adboio",
+    "closed_at": "2026-02-17T20:15:45Z",
+    "closed_by": "adboio"
+  },
+  {
+    "number": 47968,
+    "title": "Product Tour i18n support",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "adboio",
+    "closed_at": "2026-02-17T19:58:27Z",
+    "closed_by": "adboio"
+  },
+  {
+    "number": 43426,
+    "title": "Reuse intermeidate query results",
+    "labels": [],
+    "author": "robbie-c",
+    "closed_at": "2026-02-18T15:42:20Z",
+    "closed_by": "robbie-c"
+  },
+  {
+    "number": 44453,
+    "title": "Add skip index for experiments queries",
+    "labels": [
+      "bug"
+    ],
+    "author": "robbie-c",
+    "closed_at": "2026-02-18T15:38:26Z",
+    "closed_by": "robbie-c"
+  },
+  {
+    "number": 44441,
+    "title": "SES tenant spam reputation alerting / auto-disabling",
+    "labels": [],
+    "author": "havenbarnes",
+    "closed_at": "2026-02-17T16:24:53Z",
+    "closed_by": "havenbarnes"
+  },
+  {
+    "number": 42239,
+    "title": "Test suite with common workflow",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "abheek9",
+    "closed_at": "2026-02-17T16:21:43Z",
+    "closed_by": "havenbarnes"
+  },
+  {
+    "number": 46578,
+    "title": "1-click unsubscribe link",
+    "labels": [
+      "enhancement",
+      "feature/workflows"
+    ],
+    "author": "havenbarnes",
+    "closed_at": "2026-02-17T16:21:20Z",
+    "closed_by": "havenbarnes"
+  },
+  {
+    "number": 48151,
+    "title": "docker-compose.base.yml: plugins service missing SESSION_RECORDING_API_REDIS_HOST/PORT for RecordingApi",
+    "labels": [],
+    "author": "elenamitreskaGIT",
+    "closed_at": "2026-02-17T14:02:59Z",
+    "closed_by": "TueHaulund"
+  },
+  {
+    "number": 47300,
+    "title": "feat(llma): clusters open beta plan",
+    "labels": [
+      "team/llm-analytics",
+      "llm-analytics"
+    ],
+    "author": "andrewm4894",
+    "closed_at": "2026-02-13T17:20:19Z",
+    "closed_by": "andrewm4894"
+  },
+  {
+    "number": 41581,
+    "title": "Self-hosted Session Recording not working (fresh installation)",
+    "labels": [
+      "bug"
+    ],
+    "author": "laurenz-glueck",
+    "closed_at": "2026-01-05T14:56:36Z",
+    "closed_by": "pauldambra"
+  },
+  {
+    "number": 39943,
+    "title": "Feature Request: Make it easier to find activity from a specific time",
+    "labels": [
+      "enhancement",
+      "feature/property-filters"
+    ],
+    "author": "luke-belton",
+    "closed_at": "2026-02-14T19:04:22Z",
+    "closed_by": "fercgomes"
+  },
+  {
+    "number": 47955,
+    "title": "Product Tours for Mobile",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "adboio",
+    "closed_at": "2026-02-14T03:27:36Z",
+    "closed_by": "adboio"
+  },
+  {
+    "number": 38461,
+    "title": "Feature Request: Smoothing for area charts",
+    "labels": [
+      "enhancement",
+      "feature/trends",
+      "team/product-analytics"
+    ],
+    "author": "ordehi",
+    "closed_at": "2026-02-14T02:33:36Z",
+    "closed_by": "fercgomes"
+  },
+  {
+    "number": 47786,
+    "title": "Add structured logging and metrics for toolbar OAuth flow",
+    "labels": [
+      "enhancement",
+      "feature/toolbar"
+    ],
+    "author": "fercgomes",
+    "closed_at": "2026-02-13T16:34:30Z",
+    "closed_by": "fercgomes"
+  },
+  {
+    "number": 46066,
+    "title": "allow saving workflow drafts when all steps are not fully configured",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "abheek9",
+    "closed_at": "2026-02-13T12:39:27Z",
+    "closed_by": "meikelmosby"
+  },
+  {
+    "number": 46864,
+    "title": "Bug: Replay top and bottom of the dom are not in the right places",
+    "labels": [
+      "bug"
+    ],
+    "author": "clr182",
+    "closed_at": "2026-02-13T10:55:57Z",
+    "closed_by": "fasyy612"
+  },
+  {
+    "number": 47829,
+    "title": "Cross Project Experiment Creation Issue",
+    "labels": [
+      "bug"
+    ],
+    "author": "evan-mavis",
+    "closed_at": "2026-02-13T02:06:42Z",
+    "closed_by": "evan-mavis"
+  },
+  {
+    "number": 47324,
+    "title": "Customer journeys tab in customer analytics",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2026-02-12T18:06:10Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 37642,
+    "title": "Feature Request: Jira integration with error tracking",
+    "labels": [
+      "enhancement",
+      "feature/error-tracking",
+      "team/error-tracking"
+    ],
+    "author": "ordehi",
+    "closed_at": "2026-02-12T14:51:53Z",
+    "closed_by": "hpouillot"
+  },
+  {
+    "number": 44899,
+    "title": "SQL variables not recognized in HogQL queries despite being created and visible on dashboard",
+    "labels": [
+      "bug"
+    ],
+    "author": "emmanuellep-ask",
+    "closed_at": "2026-02-12T14:51:04Z",
+    "closed_by": "mariusandra"
+  },
+  {
+    "number": 39846,
+    "title": "Error when uploading source-maps using posthog-cli v0.5.0",
+    "labels": [
+      "bug",
+      "feature/error-tracking"
+    ],
+    "author": "FerDev12",
+    "closed_at": "2026-02-12T13:43:28Z",
+    "closed_by": "hpouillot"
+  },
+  {
+    "number": 35697,
+    "title": "(feat): generate bytecode for behavioral cohorts so they can be used in the actions pipeline",
+    "labels": [
+      "feature/feature-flags",
+      "team/feature-flags"
+    ],
+    "author": "dmarticus",
+    "closed_at": "2026-02-12T13:40:19Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 46525,
+    "title": "Bug: UI crashes on malformed stacktrace.frames data",
+    "labels": [
+      "bug",
+      "feature/error-tracking",
+      "team/error-tracking"
+    ],
+    "author": "christiaan-ph",
+    "closed_at": "2026-02-12T12:00:33Z",
+    "closed_by": "hpouillot"
+  },
+  {
+    "number": 47483,
+    "title": "Feature request: Autoname insights with AI",
+    "labels": [
+      "enhancement",
+      "team/product-analytics",
+      "feature/insights"
+    ],
+    "author": "gesh",
+    "closed_at": "2026-02-12T10:38:22Z",
+    "closed_by": "gesh"
+  },
+  {
+    "number": 45923,
+    "title": "Bug: Homepage shows \"Dashboard not found\" error when primary dashboard is deleted",
+    "labels": [
+      "bug",
+      "ui",
+      "ux",
+      "team/analytics-platform"
+    ],
+    "author": "christiaan-ph",
+    "closed_at": "2026-02-11T16:25:32Z",
+    "closed_by": "sampennington"
+  },
+  {
+    "number": 34169,
+    "title": "Expand the definition of \"stale\" feature flags and provide guidance",
+    "labels": [
+      "enhancement",
+      "feature/feature-flags",
+      "team/feature-flags"
+    ],
+    "author": "haacked",
+    "closed_at": "2026-02-11T15:50:39Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 44323,
+    "title": "feat(llma): Graduate Errors tab from close to open Beta to GA",
+    "labels": [
+      "enhancement",
+      "team/llm-analytics"
+    ],
+    "author": "andrewm4894",
+    "closed_at": "2026-02-10T18:15:06Z",
+    "closed_by": "andrewm4894"
+  },
+  {
+    "number": 47449,
+    "title": "Support importing from views",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "NVolcz",
+    "closed_at": "2026-02-10T13:02:28Z",
+    "closed_by": "NVolcz"
+  },
+  {
+    "number": 46540,
+    "title": "Insights API intermittently returns 500 for /api/projects/@current/insights with offset/search; works   with basic=true",
+    "labels": [
+      "bug"
+    ],
+    "author": "timurkh-devstark",
+    "closed_at": "2026-02-10T12:38:11Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 32618,
+    "title": "Feature Request: Name exports after the data they contain, not export.csv for example",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "feature/cohorts",
+      "team/feature-flags",
+      "backlog"
+    ],
+    "author": "HaynesPostHog",
+    "closed_at": "2026-02-09T14:54:26Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 43729,
+    "title": "bug(flags): Flags API allows creating invalid flag definitions",
+    "labels": [
+      "bug",
+      "good first issue",
+      "feature/feature-flags",
+      "team/feature-flags"
+    ],
+    "author": "haacked",
+    "closed_at": "2026-02-09T14:48:32Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 44815,
+    "title": "chore(flags): Migrate feature flags to use new dedicated Celery queues",
+    "labels": [
+      "feature/feature-flags",
+      "team/feature-flags",
+      "team/flags-platform"
+    ],
+    "author": "haacked",
+    "closed_at": "2026-02-09T14:19:28Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 44426,
+    "title": "Standardize how we log activity",
+    "labels": [
+      "tech-debt"
+    ],
+    "author": "arthurdedeus",
+    "closed_at": "2026-02-09T13:37:27Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 46007,
+    "title": "Show a tooltip with the name of the Dashboard when navigating the sidebar menu",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "imaje89",
+    "closed_at": "2026-02-09T12:52:37Z",
+    "closed_by": "imaje89"
+  },
+  {
+    "number": 23192,
+    "title": "Upsell UI for behavioral cohort filters",
+    "labels": [
+      "enhancement",
+      "feature/cohorts",
+      "team/feature-flags"
+    ],
+    "author": "Twixes",
+    "closed_at": "2026-02-09T08:02:17Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 33114,
+    "title": "bug(cohorts): Cohort created from insight does not render name in breadcrumb",
+    "labels": [
+      "bug",
+      "feature/cohorts",
+      "team/feature-flags"
+    ],
+    "author": "haacked",
+    "closed_at": "2026-02-09T08:02:15Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 25969,
+    "title": "Cohorts are not displaying events",
+    "labels": [
+      "bug",
+      "feature/cohorts",
+      "team/feature-flags"
+    ],
+    "author": "FrankHoli",
+    "closed_at": "2026-02-09T08:02:12Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 32815,
+    "title": "Ask Max to create a feature flag",
+    "labels": [
+      "feature/feature-flags",
+      "team/feature-flags",
+      "feature/posthog-ai"
+    ],
+    "author": "kappa90",
+    "closed_at": "2026-02-09T08:02:10Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 32814,
+    "title": "Ask Max to create a cohort",
+    "labels": [
+      "feature/feature-flags",
+      "team/feature-flags",
+      "feature/posthog-ai"
+    ],
+    "author": "kappa90",
+    "closed_at": "2026-02-09T08:02:08Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 35087,
+    "title": "emit generated bytecode from behavioral cohorts when saved so that they can be analyzed like actions",
+    "labels": [
+      "feature/feature-flags",
+      "team/feature-flags"
+    ],
+    "author": "dmarticus",
+    "closed_at": "2026-02-09T08:02:06Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 46043,
+    "title": "Bug: Disabled flags may stay enabled if errors while computing",
+    "labels": [
+      "bug",
+      "feature/feature-flags",
+      "team/feature-flags"
+    ],
+    "author": "luke-belton",
+    "closed_at": "2026-02-09T08:02:04Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 45357,
+    "title": "Sprint - Jan 26 to Feb 7",
+    "labels": [
+      "sprint"
+    ],
+    "author": "kappa90",
+    "closed_at": "2026-02-09T08:00:17Z",
+    "closed_by": "marandaneto"
+  },
+  {
+    "number": 43821,
+    "title": "bug(flags): No UI warning when a flag can't be evaluated locally",
+    "labels": [
+      "bug",
+      "good first issue",
+      "feature/feature-flags",
+      "team/feature-flags"
+    ],
+    "author": "haacked",
+    "closed_at": "2026-02-09T07:31:04Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 45378,
+    "title": "SUPPORT SUPERDAY Web vitals toolbar settings link doesn't navigate to the proper page",
+    "labels": [
+      "bug"
+    ],
+    "author": "phillram",
+    "closed_at": "2026-02-08T14:33:25Z",
+    "closed_by": "fercgomes"
+  },
+  {
+    "number": 47199,
+    "title": "fix(llma): trace summarization still pegs CPU for teams with large traces",
+    "labels": [
+      "bug",
+      "team/llm-analytics"
+    ],
+    "author": "andrewm4894",
+    "closed_at": "2026-02-07T23:56:49Z",
+    "closed_by": "andrewm4894"
+  },
+  {
+    "number": 46227,
+    "title": "Media not showing correctly cuz CSP Violated even the posthog has added to whitelist CSP in website config in session replay",
+    "labels": [
+      "bug"
+    ],
+    "author": "IqroNegoro",
+    "closed_at": "2026-01-30T02:13:43Z",
+    "closed_by": "IqroNegoro"
+  },
+  {
+    "number": 47115,
+    "title": "Livestream Service Ignores Kafka Security Protocol Configuration",
+    "labels": [],
+    "author": "rayudu-drivex",
+    "closed_at": "2026-02-06T13:40:25Z",
+    "closed_by": "pauldambra"
+  },
+  {
+    "number": 45910,
+    "title": "Option to filter out test users from power users table",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2026-02-06T15:29:35Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 45359,
+    "title": "Make customer profile nodes tab aware",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2026-02-06T13:44:37Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 46775,
+    "title": "Bug report: Heatmaps in dark mode - white text on white BG, in some elements",
+    "labels": [
+      "bug",
+      "team/web-analytics",
+      "feature/heatmaps"
+    ],
+    "author": "slshults",
+    "closed_at": "2026-02-05T18:38:04Z",
+    "closed_by": "lricoy"
+  },
+  {
+    "number": 46021,
+    "title": "Feature Request: Notification if materializations fail",
+    "labels": [
+      "enhancement",
+      "team/data-warehouse",
+      "feature/data-warehouse"
+    ],
+    "author": "luke-belton",
+    "closed_at": "2026-02-05T16:44:53Z",
+    "closed_by": "sakce"
+  },
+  {
+    "number": 30983,
+    "title": "Bug: Insight Type filter not working as expected",
+    "labels": [
+      "bug",
+      "good first issue",
+      "feature/saved-insights",
+      "team/product-analytics"
+    ],
+    "author": "luke-belton",
+    "closed_at": "2026-02-05T12:30:50Z",
+    "closed_by": "anirudhpillai"
+  },
+  {
+    "number": 46150,
+    "title": "Create dedicated Temporal worker queue for LLM Analytics",
+    "labels": [
+      "enhancement",
+      "team/llm-analytics"
+    ],
+    "author": "andrewm4894",
+    "closed_at": "2026-02-04T17:33:27Z",
+    "closed_by": "andrewm4894"
+  },
+  {
+    "number": 46058,
+    "title": "Dark mode information wrong and search functionality doesn't find it easily",
+    "labels": [
+      "bug"
+    ],
+    "author": "RafeSacks",
+    "closed_at": "2026-02-04T16:32:23Z",
+    "closed_by": "fercgomes"
+  },
+  {
+    "number": 44006,
+    "title": "Revenue data in customer profiles",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2026-02-03T16:36:40Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 24210,
+    "title": "Filtering and sorting Dashboards and Insights using tags",
+    "labels": [
+      "enhancement",
+      "feature/dashboards",
+      "team/product-analytics",
+      "feature/insights"
+    ],
+    "author": "Bogdanovist",
+    "closed_at": "2026-02-03T13:43:52Z",
+    "closed_by": "anirudhpillai"
+  },
+  {
+    "number": 45164,
+    "title": "Bug: navigation lockup when viewing replays",
+    "labels": [
+      "bug",
+      "team/product-analytics",
+      "team/session-replay"
+    ],
+    "author": "clr182",
+    "closed_at": "2026-02-03T09:45:48Z",
+    "closed_by": "pauldambra"
+  },
+  {
+    "number": 41348,
+    "title": "Provide docker compose config, instead of shell script to init project",
+    "labels": [],
+    "author": "vitonsky",
+    "closed_at": "2025-12-05T22:50:03Z",
+    "closed_by": "pauldambra"
+  },
+  {
+    "number": 43749,
+    "title": "Claude connector for PostHog",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "joesaunderson",
+    "closed_at": "2026-02-02T18:39:27Z",
+    "closed_by": "rafaeelaudibert"
+  },
+  {
+    "number": 29223,
+    "title": "Conversion window limit cannot delete",
+    "labels": [
+      "bug",
+      "good first issue",
+      "feature/funnels",
+      "team/product-analytics"
+    ],
+    "author": "darkopia",
+    "closed_at": "2026-01-30T07:40:52Z",
+    "closed_by": "sampennington"
+  },
+  {
+    "number": 31010,
+    "title": "Feature Request: Rename features in early access",
+    "labels": [
+      "enhancement",
+      "feature/early-access-management"
+    ],
+    "author": "luke-belton",
+    "closed_at": "2026-01-29T23:35:55Z",
+    "closed_by": "dustinbyrne"
+  },
+  {
+    "number": 44884,
+    "title": "Self Hosted Is not registering any event platform : react-native",
+    "labels": [
+      "bug",
+      "question",
+      "hobby-self-host",
+      "feature/mobile"
+    ],
+    "author": "hamzaowaisog",
+    "closed_at": "2026-01-29T12:29:12Z",
+    "closed_by": "hamzaowaisog"
+  },
+  {
+    "number": 40966,
+    "title": "Editing a SQL insight from a dashboard with overrides is confusing",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "team/product-analytics"
+    ],
+    "author": "andyzzhao",
+    "closed_at": "2026-01-29T12:19:31Z",
+    "closed_by": "sampennington"
+  },
+  {
+    "number": 40420,
+    "title": "Split ID modal won't close without refresh",
+    "labels": [
+      "bug",
+      "good first issue",
+      "feature/persons",
+      "team/product-analytics"
+    ],
+    "author": "kyleswank",
+    "closed_at": "2026-01-29T09:39:21Z",
+    "closed_by": "sampennington"
+  },
+  {
+    "number": 45064,
+    "title": "rename `evaluation_environments` to `evaluation_contexts`",
+    "labels": [],
+    "author": "dmarticus",
+    "closed_at": "2026-01-29T03:37:20Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 42168,
+    "title": "Feature Flag Secret Key Rotation Doesn't Obey Project Permissions",
+    "labels": [
+      "bug",
+      "feature/feature-flags",
+      "feature/permissions",
+      "team/feature-flags",
+      "team/platform-features"
+    ],
+    "author": "kyleswank",
+    "closed_at": "2026-01-28T20:09:40Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 26480,
+    "title": "Bug: Changing the sorting of the results of an insight resets the date range and grouping",
+    "labels": [
+      "bug",
+      "good first issue",
+      "team/product-analytics",
+      "feature/insights"
+    ],
+    "author": "HaynesPostHog",
+    "closed_at": "2026-01-28T17:03:15Z",
+    "closed_by": "sampennington"
+  },
+  {
+    "number": 31157,
+    "title": "Bug report: Lifecycle legend shows action name repeated, instead of lifecycle stage names",
+    "labels": [
+      "bug",
+      "good first issue",
+      "feature/lifecycle",
+      "team/product-analytics",
+      "feature/insights"
+    ],
+    "author": "slshults",
+    "closed_at": "2026-01-28T15:27:15Z",
+    "closed_by": "sampennington"
+  },
+  {
+    "number": 41990,
+    "title": "Clicking ... in activity view for Survey sent events results in kea logic error",
+    "labels": [
+      "bug",
+      "good first issue",
+      "team/product-analytics"
+    ],
+    "author": "kyleswank",
+    "closed_at": "2026-01-28T13:52:00Z",
+    "closed_by": "sampennington"
+  },
+  {
+    "number": 28355,
+    "title": "Bug: Filtering by regex pattern throwing an error",
+    "labels": [
+      "bug",
+      "good first issue",
+      "team/product-analytics",
+      "feature/insights"
+    ],
+    "author": "HaynesPostHog",
+    "closed_at": "2026-01-28T13:38:57Z",
+    "closed_by": "sampennington"
+  },
+  {
+    "number": 45918,
+    "title": "feat(llma): generation-level clustering and summarization",
+    "labels": [
+      "team/llm-analytics"
+    ],
+    "author": "andrewm4894",
+    "closed_at": "2026-01-28T12:52:25Z",
+    "closed_by": "andrewm4894"
+  },
+  {
+    "number": 31679,
+    "title": "Bug: Prevent focus error when saving insight after viewing recording",
+    "labels": [
+      "bug",
+      "good first issue",
+      "team/product-analytics",
+      "feature/insights"
+    ],
+    "author": "ordehi",
+    "closed_at": "2026-01-28T10:31:51Z",
+    "closed_by": "sampennington"
+  },
+  {
+    "number": 43197,
+    "title": "Workflow Template Editor",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "odin-posthog",
+    "closed_at": "2026-01-27T21:53:34Z",
+    "closed_by": "abheek9"
+  },
+  {
+    "number": 37970,
+    "title": "Feature Request: Configure sync time with BigQuery destination",
+    "labels": [
+      "enhancement",
+      "team/cdp",
+      "team/batch-exports"
+    ],
+    "author": "ordehi",
+    "closed_at": "2026-01-27T16:07:21Z",
+    "closed_by": "rossgray"
+  },
+  {
+    "number": 28731,
+    "title": "Batch export: Allow hour of daily schedules to be customized",
+    "labels": [
+      "team/batch-exports"
+    ],
+    "author": "rossgray",
+    "closed_at": "2026-01-27T16:07:20Z",
+    "closed_by": "rossgray"
+  },
+  {
+    "number": 45271,
+    "title": "Bug: Insights - Data table filters does not reflect the URL filters",
+    "labels": [
+      "bug",
+      "team/product-analytics",
+      "feature/insights",
+      "feature/data-table"
+    ],
+    "author": "gesh",
+    "closed_at": "2026-01-27T13:56:06Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 37929,
+    "title": "Feature request: embed legend in subscription output",
+    "labels": [
+      "enhancement",
+      "feature/alerts",
+      "team/analytics-platform"
+    ],
+    "author": "clr182",
+    "closed_at": "2026-01-27T12:58:06Z",
+    "closed_by": "vdekrijger"
+  },
+  {
+    "number": 43273,
+    "title": "Sprint - Jan 5 to Jan 23",
+    "labels": [
+      "sprint"
+    ],
+    "author": "kappa90",
+    "closed_at": "2026-01-26T17:12:52Z",
+    "closed_by": "marandaneto"
+  },
+  {
+    "number": 41262,
+    "title": "Insights added to person/group canvas should reflect the entity",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2026-01-26T13:24:59Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 39579,
+    "title": "Answer questions with PostHog AI",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2026-01-26T13:24:48Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 43933,
+    "title": "Customer Analytics user feedback",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2026-01-26T13:24:46Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 45269,
+    "title": "Bug: Insights - Long strings overflow in table insight",
+    "labels": [
+      "bug",
+      "team/product-analytics",
+      "feature/insights"
+    ],
+    "author": "gesh",
+    "closed_at": "2026-01-26T12:31:09Z",
+    "closed_by": "sampennington"
+  },
+  {
+    "number": 45882,
+    "title": "Chris",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "chrisy19871987-ai",
+    "closed_at": "2026-01-26T05:27:14Z",
+    "closed_by": "chrisy19871987-ai"
+  },
+  {
+    "number": 44256,
+    "title": "Feature Request: Support Survey event property targeting in other SDKs.",
+    "labels": [
+      "enhancement",
+      "feature/surveys",
+      "team/surveys"
+    ],
+    "author": "ordehi",
+    "closed_at": "2026-01-23T22:36:17Z",
+    "closed_by": "adboio"
+  },
+  {
+    "number": 45735,
+    "title": "Cohorts not working properly (adding / deleting user)",
+    "labels": [
+      "bug"
+    ],
+    "author": "yijiaradpod",
+    "closed_at": "2026-01-23T02:48:38Z",
+    "closed_by": "yijiaradpod"
+  },
+  {
+    "number": 44003,
+    "title": "Diagnose people list query performance issues",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2026-01-22T19:22:41Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 42302,
+    "title": "Feature Request: Add time-of-day filtering to dashboard date range picker",
+    "labels": [
+      "enhancement",
+      "feature/dashboards",
+      "team/product-analytics"
+    ],
+    "author": "ordehi",
+    "closed_at": "2026-01-22T17:28:50Z",
+    "closed_by": "ordehi"
+  },
+  {
+    "number": 45633,
+    "title": "Workflows Logs/Invocations Incomplete (also sorted oddly)",
+    "labels": [
+      "bug",
+      "feature/workflows"
+    ],
+    "author": "kyleswank",
+    "closed_at": "2026-01-22T16:39:55Z",
+    "closed_by": "havenbarnes"
+  },
+  {
+    "number": 44561,
+    "title": "Bug: Creating a new insight from a dashboard no longer adds it to the dashboard",
+    "labels": [
+      "bug",
+      "feature/dashboards",
+      "team/product-analytics",
+      "feature/insights"
+    ],
+    "author": "luke-belton",
+    "closed_at": "2026-01-22T12:45:24Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 44467,
+    "title": "Support return-path header in workflow emails",
+    "labels": [
+      "enhancement",
+      "feature/messaging",
+      "feature/workflows"
+    ],
+    "author": "kyleswank",
+    "closed_at": "2026-01-21T19:22:05Z",
+    "closed_by": "meikelmosby"
+  },
+  {
+    "number": 44825,
+    "title": "Unable to test sending emails in Workflows",
+    "labels": [
+      "bug",
+      "feature/messaging",
+      "feature/workflows"
+    ],
+    "author": "kyleswank",
+    "closed_at": "2026-01-21T19:01:18Z",
+    "closed_by": "kyleswank"
+  },
+  {
+    "number": 42417,
+    "title": "chore(flags): Change /flags to load config from the RemoteConfig hypercache",
+    "labels": [
+      "feature/feature-flags",
+      "team/feature-flags",
+      "team/flags-platform"
+    ],
+    "author": "dmarticus",
+    "closed_at": "2026-01-21T18:15:37Z",
+    "closed_by": "matheus-vb"
+  },
+  {
+    "number": 45562,
+    "title": "feat(llma): Allow expanding or hovering to read full reasoning text",
+    "labels": [
+      "enhancement",
+      "team/llm-analytics",
+      "llma/evals"
+    ],
+    "author": "andrewm4894",
+    "closed_at": "2026-01-21T17:57:02Z",
+    "closed_by": "andrewm4894"
+  },
+  {
+    "number": 22221,
+    "title": "Add Top Paths from Web Analytics beta as insight",
+    "labels": [
+      "enhancement",
+      "team/product-analytics",
+      "team/web-analytics"
+    ],
+    "author": "rodolpheirany-stream",
+    "closed_at": "2026-01-20T22:39:06Z",
+    "closed_by": "lricoy"
+  },
+  {
+    "number": 30854,
+    "title": "feat(web-analytics): Allow adding overview query to regular dashboards",
+    "labels": [
+      "enhancement",
+      "team/web-analytics"
+    ],
+    "author": "robbie-c",
+    "closed_at": "2026-01-20T22:38:20Z",
+    "closed_by": "lricoy"
+  },
+  {
+    "number": 45446,
+    "title": "Feature Request: Session duration metrics in experiments",
+    "labels": [
+      "enhancement",
+      "team/experiments",
+      "experiments/new-engine"
+    ],
+    "author": "ordehi",
+    "closed_at": "2026-01-20T20:52:43Z",
+    "closed_by": "ordehi"
+  },
+  {
+    "number": 41549,
+    "title": "Improve UX around non-matching multi-variant users",
+    "labels": [
+      "feature/feature-flags"
+    ],
+    "author": "dustinbyrne",
+    "closed_at": "2026-01-20T16:59:08Z",
+    "closed_by": "dustinbyrne"
+  },
+  {
+    "number": 45438,
+    "title": "chore(llma): Move Sessions tab to GA",
+    "labels": [
+      "team/llm-analytics"
+    ],
+    "author": "andrewm4894",
+    "closed_at": "2026-01-20T14:14:57Z",
+    "closed_by": "andrewm4894"
+  },
+  {
+    "number": 45222,
+    "title": "Replace Bitnami Kafka images with free SolDevelo alternative",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "igor-soldev",
+    "closed_at": "2026-01-19T07:09:44Z",
+    "closed_by": "igor-soldev"
+  },
+  {
+    "number": 41955,
+    "title": "Bug: PostHog backend fails to start on WSL2 due to incorrect Granian host binding",
+    "labels": [
+      "bug"
+    ],
+    "author": "wassafshahzad",
+    "closed_at": "2026-01-20T00:02:00Z",
+    "closed_by": "rafaeelaudibert"
+  },
+  {
+    "number": 44927,
+    "title": "Support custom query parameters as event properties in hosted survey URLs",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "jaredromano",
+    "closed_at": "2026-01-19T19:23:28Z",
+    "closed_by": "adboio"
+  },
+  {
+    "number": 44008,
+    "title": "Enrich power users table with revenue and attribution columns",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2026-01-19T17:38:57Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 45051,
+    "title": "Add attribution data to power users table",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2026-01-19T17:38:50Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 44015,
+    "title": "Feature Request: Survey display option: Show until completed",
+    "labels": [
+      "enhancement",
+      "feature/surveys",
+      "team/surveys"
+    ],
+    "author": "ordehi",
+    "closed_at": "2026-01-19T16:42:38Z",
+    "closed_by": "adboio"
+  },
+  {
+    "number": 45154,
+    "title": "bug: Client SDKs clear cache when exceeding quota limits",
+    "labels": [],
+    "author": "dustinbyrne",
+    "closed_at": "2026-01-19T15:39:10Z",
+    "closed_by": "dustinbyrne"
+  },
+  {
+    "number": 45050,
+    "title": "Add MRR and LTV to power users table",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2026-01-19T13:23:26Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 45221,
+    "title": "Use Person Property Timezone for Workflows",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "meikelmosby",
+    "closed_at": "2026-01-19T12:07:55Z",
+    "closed_by": "meikelmosby"
+  },
+  {
+    "number": 45317,
+    "title": "Feature Request(Surveys): Relative date comparisons for survey targeting",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "leen-she",
+    "closed_at": "2026-01-18T10:05:20Z",
+    "closed_by": "leen-she"
+  },
+  {
+    "number": 43420,
+    "title": "Improve Clickhouse skip index usage by not wrapping things in `ifNull(nullIf(...))`",
+    "labels": [],
+    "author": "robbie-c",
+    "closed_at": "2026-01-16T15:48:34Z",
+    "closed_by": "robbie-c"
+  },
+  {
+    "number": 40321,
+    "title": "Customer canvas settings/management",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2026-01-16T14:11:50Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 40327,
+    "title": "Canvas settings backend",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2026-01-16T14:11:39Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 41261,
+    "title": "Floating suggestion in person canvas sparked confusion",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2026-01-16T14:11:00Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 44005,
+    "title": "Persist data in customer profiles",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2026-01-16T14:10:29Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 44811,
+    "title": "Improve visibility of dependent flags visible in feature flag view",
+    "labels": [],
+    "author": "dustinbyrne",
+    "closed_at": "2026-01-15T21:33:03Z",
+    "closed_by": "dustinbyrne"
+  },
+  {
+    "number": 44524,
+    "title": "Feature Request: Yearly recurring interval on flags scheduling",
+    "labels": [
+      "enhancement",
+      "feature/feature-flags",
+      "team/feature-flags"
+    ],
+    "author": "darkopia",
+    "closed_at": "2026-01-15T19:11:46Z",
+    "closed_by": "dustinbyrne"
+  },
+  {
+    "number": 38918,
+    "title": "$exception event is not processed on self-hosted",
+    "labels": [
+      "bug",
+      "feature/error-tracking",
+      "team/error-tracking"
+    ],
+    "author": "ercanzirh",
+    "closed_at": "2026-01-02T21:32:00Z",
+    "closed_by": "ablaszkiewicz"
+  },
+  {
+    "number": 44165,
+    "title": "People List not showing in people page",
+    "labels": [
+      "bug",
+      "hobby-self-host"
+    ],
+    "author": "purvalpatel",
+    "closed_at": "2026-01-15T05:15:17Z",
+    "closed_by": "purvalpatel"
+  },
+  {
+    "number": 44836,
+    "title": "Marketing Analytics double-counts Meta Ads conversions (sums multiple action types for same conversion)",
+    "labels": [
+      "bug"
+    ],
+    "author": "TrevorLoucks",
+    "closed_at": "2026-01-14T23:29:35Z",
+    "closed_by": "TrevorLoucks"
+  },
+  {
+    "number": 24485,
+    "title": "Support for semantic (app) versions in event filters and feature flag release conditions",
+    "labels": [
+      "enhancement",
+      "feature/feature-flags",
+      "team/feature-flags",
+      "feature/mobile"
+    ],
+    "author": "danbim",
+    "closed_at": "2026-01-14T00:27:54Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 44745,
+    "title": "feat(mcp): Add ability to create and edit Actions",
+    "labels": [
+      "enhancement",
+      "MCP",
+      "feature/mcp"
+    ],
+    "author": "andrewm4894",
+    "closed_at": "2026-01-14T19:39:34Z",
+    "closed_by": "andrewm4894"
+  },
+  {
+    "number": 45022,
+    "title": "Cyclotron Work",
+    "labels": [],
+    "author": "meikelmosby",
+    "closed_at": "2026-01-14T16:46:12Z",
+    "closed_by": "meikelmosby"
+  },
+  {
+    "number": 45019,
+    "title": "Sprint - Jan 19 to Jan 30",
+    "labels": [
+      "sprint"
+    ],
+    "author": "marandaneto",
+    "closed_at": "2026-01-14T16:35:26Z",
+    "closed_by": "benjackwhite"
+  },
+  {
+    "number": 45039,
+    "title": "Issue from session replay 019bbd42",
+    "labels": [],
+    "author": "posthog",
+    "closed_at": "2026-01-14T16:12:38Z",
+    "closed_by": "fasyy612"
+  },
+  {
+    "number": 44918,
+    "title": "Bug: primary_metrics_ordered_uuids is null but primary metrics exist",
+    "labels": [
+      "bug",
+      "team/experiments",
+      "experiments/new-engine"
+    ],
+    "author": "ordehi",
+    "closed_at": "2026-01-14T14:09:59Z",
+    "closed_by": "ordehi"
+  },
+  {
+    "number": 44919,
+    "title": "[CDP-TEST-HIDDEN] Customer.io destination sending pipeline failure emails",
+    "labels": [
+      "bug",
+      "feature/pipelines",
+      "feature/messaging"
+    ],
+    "author": "kyleswank",
+    "closed_at": "2026-01-13T17:22:14Z",
+    "closed_by": "kyleswank"
+  },
+  {
+    "number": 41383,
+    "title": "Support Azure Blob Storage batch exports destination",
+    "labels": [
+      "team/batch-exports"
+    ],
+    "author": "rossgray",
+    "closed_at": "2026-01-13T13:18:31Z",
+    "closed_by": "tomasfarias"
+  },
+  {
+    "number": 25881,
+    "title": "Feature request: clarify text around overall conversion % and relative to previous step % in funnels",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "feature/funnels",
+      "team/product-analytics"
+    ],
+    "author": "abigailbramble",
+    "closed_at": "2026-01-13T12:56:07Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 12021,
+    "title": "Proposal: PostHog standard fields - to reduce time to spark joy",
+    "labels": [
+      "enhancement",
+      "feature/toolbar",
+      "feature/onboarding",
+      "stale",
+      "feature/data-management"
+    ],
+    "author": "corywatilo",
+    "closed_at": "2026-01-13T10:06:35Z",
+    "closed_by": "joethreepwood"
+  },
+  {
+    "number": 25750,
+    "title": "Sort insights by name",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "feature/saved-insights",
+      "team/product-analytics"
+    ],
+    "author": "davidmondok",
+    "closed_at": "2026-01-13T09:13:38Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 44682,
+    "title": "Add project api key privacy, rate limiting, etc to Managed Reverse Proxy",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "kyleswank",
+    "closed_at": "2026-01-12T13:02:58Z",
+    "closed_by": "kyleswank"
+  },
+  {
+    "number": 34066,
+    "title": "Integrate separate persons DB with `/flags` service",
+    "labels": [
+      "feature/feature-flags",
+      "team/feature-flags"
+    ],
+    "author": "dmarticus",
+    "closed_at": "2026-01-10T17:16:34Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 26948,
+    "title": "Have `/decide` include disabled flag keys mapping to `null`",
+    "labels": [
+      "good first issue",
+      "feature/feature-flags",
+      "team/feature-flags"
+    ],
+    "author": "havenbarnes",
+    "closed_at": "2026-01-10T00:18:20Z",
+    "closed_by": "haacked"
+  },
+  {
+    "number": 24994,
+    "title": "Hide feature flag not relevant to the user from the `decide` response",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "feature/feature-flags",
+      "team/feature-flags"
+    ],
+    "author": "jurajmajerik",
+    "closed_at": "2026-01-10T00:16:49Z",
+    "closed_by": "haacked"
+  },
+  {
+    "number": 44528,
+    "title": "Properly handle new version in SDK doctor",
+    "labels": [
+      "bug",
+      "feature/sdk-doctor"
+    ],
+    "author": "jonathanlab",
+    "closed_at": "2026-01-09T19:23:26Z",
+    "closed_by": "lricoy"
+  },
+  {
+    "number": 40842,
+    "title": "Investigate dashboards not showing latest data",
+    "labels": [
+      "team/analytics-platform"
+    ],
+    "author": "andyzzhao",
+    "closed_at": "2026-01-09T16:00:39Z",
+    "closed_by": "andyzzhao"
+  },
+  {
+    "number": 19509,
+    "title": "Updated onboarding flow",
+    "labels": [
+      "stale"
+    ],
+    "author": "corywatilo",
+    "closed_at": "2026-01-09T09:45:41Z",
+    "closed_by": "joethreepwood"
+  },
+  {
+    "number": 33689,
+    "title": "Bug: Renaming a graph series with a long action or event name does not wrap.",
+    "labels": [
+      "bug",
+      "good first issue",
+      "team/product-analytics",
+      "feature/insights"
+    ],
+    "author": "darkopia",
+    "closed_at": "2026-01-09T09:35:42Z",
+    "closed_by": "darkopia"
+  },
+  {
+    "number": 43983,
+    "title": "Toolbar switch labels invisible when viewing in dark mode",
+    "labels": [
+      "bug"
+    ],
+    "author": "buildwithmalik",
+    "closed_at": "2026-01-09T00:41:37Z",
+    "closed_by": "Twixes"
+  },
+  {
+    "number": 44280,
+    "title": "Persist data in group profiles",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2026-01-08T21:55:22Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 44445,
+    "title": "Feature Request: Don't apply a breakdown limit during export",
+    "labels": [
+      "enhancement",
+      "feature/insights",
+      "feature/table-exports"
+    ],
+    "author": "luke-belton",
+    "closed_at": "2026-01-08T18:03:36Z",
+    "closed_by": "andyzzhao"
+  },
+  {
+    "number": 30324,
+    "title": "Bug: Unable to Save Goal Line Changes in Insights",
+    "labels": [
+      "bug",
+      "good first issue",
+      "team/product-analytics",
+      "feature/insights"
+    ],
+    "author": "HaynesPostHog",
+    "closed_at": "2026-01-08T14:31:56Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 39011,
+    "title": "Team Replay Q4 2025 Megaissue",
+    "labels": [],
+    "author": "pauldambra",
+    "closed_at": "2026-01-08T09:46:48Z",
+    "closed_by": "TueHaulund"
+  },
+  {
+    "number": 29532,
+    "title": "Session Replay Customisable Retention",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "pauldambra",
+    "closed_at": "2026-01-08T09:46:33Z",
+    "closed_by": "TueHaulund"
+  },
+  {
+    "number": 44334,
+    "title": "Self Hosted instance not receiving events (RequestDecodingError in Capture Service)",
+    "labels": [
+      "bug",
+      "hobby-self-host"
+    ],
+    "author": "michaelpomogajko",
+    "closed_at": "2026-01-06T18:26:29Z",
+    "closed_by": "pauldambra"
+  },
+  {
+    "number": 42032,
+    "title": "add variables to taxonomy filter to filter on it in conditions",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "meikelmosby",
+    "closed_at": "2026-01-07T15:31:35Z",
+    "closed_by": "havenbarnes"
+  },
+  {
+    "number": 44279,
+    "title": "Persist data in person profile",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2026-01-07T15:26:57Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 43227,
+    "title": "Persist state across steps when using workflow tester",
+    "labels": [],
+    "author": "havenbarnes",
+    "closed_at": "2026-01-07T15:12:57Z",
+    "closed_by": "havenbarnes"
+  },
+  {
+    "number": 43137,
+    "title": "Sprint - Dec 15 to Jan 2",
+    "labels": [
+      "sprint"
+    ],
+    "author": "frankh",
+    "closed_at": "2026-01-07T13:58:51Z",
+    "closed_by": "marandaneto"
+  },
+  {
+    "number": 44105,
+    "title": "[Self Hosted] - Session recordings not visible",
+    "labels": [
+      "bug"
+    ],
+    "author": "scoobhidu",
+    "closed_at": "2026-01-04T17:19:08Z",
+    "closed_by": "pauldambra"
+  },
+  {
+    "number": 44395,
+    "title": "posthog.com image display problem",
+    "labels": [
+      "bug"
+    ],
+    "author": "suleyman-shb",
+    "closed_at": "2026-01-07T07:14:12Z",
+    "closed_by": "suleyman-shb"
+  },
+  {
+    "number": 31914,
+    "title": "bug(flags): Scheduling a new condition does not reset the rollout value",
+    "labels": [
+      "bug",
+      "good first issue",
+      "feature/feature-flags",
+      "team/feature-flags",
+      "ux",
+      "backlog"
+    ],
+    "author": "haacked",
+    "closed_at": "2026-01-05T23:34:29Z",
+    "closed_by": "haacked"
+  },
+  {
+    "number": 44150,
+    "title": "Feature Request: More reliable cross-session/cross-device survey wait period enforcement",
+    "labels": [
+      "enhancement",
+      "feature/surveys",
+      "team/surveys"
+    ],
+    "author": "ordehi",
+    "closed_at": "2026-01-05T22:01:45Z",
+    "closed_by": "adboio"
+  },
+  {
+    "number": 25567,
+    "title": "Migrating historical data from Cloud to Self-Hosted",
+    "labels": [],
+    "author": "StrandedKitty",
+    "closed_at": "2026-01-05T21:31:01Z",
+    "closed_by": "pauldambra"
+  },
+  {
+    "number": 32683,
+    "title": "How to self-host locally on a windows 10 pc?",
+    "labels": [],
+    "author": "vanuverma",
+    "closed_at": "2026-01-05T21:30:21Z",
+    "closed_by": "pauldambra"
+  },
+  {
+    "number": 25087,
+    "title": " Session replay should play HLS video content",
+    "labels": [],
+    "author": "MannyAdumbire",
+    "closed_at": "2026-01-05T21:28:16Z",
+    "closed_by": "pauldambra"
+  },
+  {
+    "number": 34458,
+    "title": "Events not being ingested into ClickHouse despite successful API requests - Self-hosted v1.43.1",
+    "labels": [],
+    "author": "frigga-dhananjay",
+    "closed_at": "2026-01-05T21:26:22Z",
+    "closed_by": "pauldambra"
+  },
+  {
+    "number": 32108,
+    "title": "CSRF verification failed (403) when using self-hosted PostHog and /i/v0/e/ endpoint",
+    "labels": [],
+    "author": "Felipoe",
+    "closed_at": "2026-01-05T21:26:09Z",
+    "closed_by": "pauldambra"
+  },
+  {
+    "number": 41794,
+    "title": "[Issues] There are no matching persons for this query",
+    "labels": [
+      "hobby-self-host"
+    ],
+    "author": "astro-ge",
+    "closed_at": "2026-01-05T21:24:55Z",
+    "closed_by": "pauldambra"
+  },
+  {
+    "number": 40777,
+    "title": "no person generated in new posthog versions",
+    "labels": [
+      "bug"
+    ],
+    "author": "mehrad989",
+    "closed_at": "2026-01-05T21:24:39Z",
+    "closed_by": "pauldambra"
+  },
+  {
+    "number": 32607,
+    "title": "Is self-host was no longer support\uff1f",
+    "labels": [
+      "bug"
+    ],
+    "author": "joebnb",
+    "closed_at": "2026-01-05T14:59:04Z",
+    "closed_by": "pauldambra"
+  },
+  {
+    "number": 38414,
+    "title": "Plugins and Feature-flag containers error",
+    "labels": [
+      "bug"
+    ],
+    "author": "nmime",
+    "closed_at": "2026-01-05T14:56:05Z",
+    "closed_by": "pauldambra"
+  },
+  {
+    "number": 40627,
+    "title": "Bug: Session replay Buffering",
+    "labels": [
+      "bug",
+      "team/session-replay"
+    ],
+    "author": "clr182",
+    "closed_at": "2026-01-05T14:52:28Z",
+    "closed_by": "pauldambra"
+  },
+  {
+    "number": 43766,
+    "title": "cymbal container in restarting state",
+    "labels": [
+      "bug"
+    ],
+    "author": "fevlake",
+    "closed_at": "2026-01-05T14:50:50Z",
+    "closed_by": "pauldambra"
+  },
+  {
+    "number": 44219,
+    "title": "Fresh install doesn't start because of request size mismatch",
+    "labels": [
+      "bug"
+    ],
+    "author": "Spearhead1038",
+    "closed_at": "2026-01-04T18:41:34Z",
+    "closed_by": "Spearhead1038"
+  },
+  {
+    "number": 38494,
+    "title": "Plugin Server - Node still error on latest version",
+    "labels": [
+      "bug"
+    ],
+    "author": "jade-jpy",
+    "closed_at": "2026-01-04T17:17:47Z",
+    "closed_by": "pauldambra"
+  },
+  {
+    "number": 43827,
+    "title": "[Self-Hosted] Livestream container failing to connect to kafka",
+    "labels": [
+      "bug"
+    ],
+    "author": "feschaffa",
+    "closed_at": "2026-01-04T17:13:21Z",
+    "closed_by": "pauldambra"
+  },
+  {
+    "number": 43550,
+    "title": "Selfhosted Feature-Flags container continuously crashing during startup due to missing configs",
+    "labels": [
+      "bug"
+    ],
+    "author": "sayer122",
+    "closed_at": "2025-12-17T11:13:29Z",
+    "closed_by": "sayer122"
+  },
+  {
+    "number": 40237,
+    "title": "feat(llma): better views for evals",
+    "labels": [
+      "llma/evals"
+    ],
+    "author": "carlos-marchal-ph",
+    "closed_at": "2026-01-02T09:58:08Z",
+    "closed_by": "carlos-marchal-ph"
+  },
+  {
+    "number": 43670,
+    "title": "Bug: replay frontend visual bug no replay window",
+    "labels": [
+      "bug",
+      "ui",
+      "team/session-replay",
+      "ui-ux-improvement"
+    ],
+    "author": "clr182",
+    "closed_at": "2025-12-30T22:42:53Z",
+    "closed_by": "pauldambra"
+  },
+  {
+    "number": 43912,
+    "title": "Data Pipeline MongoDB Connector: Schema discovery times out on large databases (missing $sample + nameOnly)",
+    "labels": [
+      "performance"
+    ],
+    "author": "rawmarshmellows",
+    "closed_at": "2025-12-30T11:58:34Z",
+    "closed_by": "Gilbert09"
+  },
+  {
+    "number": 42255,
+    "title": "Feature Request: Improve chart legend display to reduce redundancy and save space",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "feature/trends",
+      "team/product-analytics"
+    ],
+    "author": "ordehi",
+    "closed_at": "2025-12-30T09:07:54Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 43820,
+    "title": "Retention Insight on Dashboard Displays ID When Filtering, Not Cohort Name",
+    "labels": [
+      "bug",
+      "team/analytics-platform"
+    ],
+    "author": "kyleswank",
+    "closed_at": "2025-12-30T08:48:48Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 39228,
+    "title": "Feature Request: Retention - Add goal lines to the chart",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "feature/retention",
+      "team/product-analytics"
+    ],
+    "author": "gesh",
+    "closed_at": "2025-12-29T14:21:26Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 43226,
+    "title": "\"Send email to myself\" tester",
+    "labels": [],
+    "author": "havenbarnes",
+    "closed_at": "2025-12-29T14:00:57Z",
+    "closed_by": "odin-posthog"
+  },
+  {
+    "number": 40309,
+    "title": "Bug Report: decimal options aren't working",
+    "labels": [
+      "bug",
+      "good first issue",
+      "team/product-analytics"
+    ],
+    "author": "clr182",
+    "closed_at": "2025-12-29T10:16:58Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 29801,
+    "title": "Trends visualization on web analytics do not work with Path Cleaning: On.",
+    "labels": [
+      "bug",
+      "team/web-analytics"
+    ],
+    "author": "lricoy",
+    "closed_at": "2025-12-26T21:21:17Z",
+    "closed_by": "lricoy"
+  },
+  {
+    "number": 43934,
+    "title": "Power users showing as Unknown in Customer Analytics dashboard",
+    "labels": [
+      "bug"
+    ],
+    "author": "arthurdedeus",
+    "closed_at": "2025-12-23T15:09:44Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 43631,
+    "title": "bug(flags): When local evaluation is enabled, get_all_flags should NOT include system survey flags",
+    "labels": [
+      "bug",
+      "feature/feature-flags",
+      "team/feature-flags"
+    ],
+    "author": "haacked",
+    "closed_at": "2025-12-19T22:12:04Z",
+    "closed_by": "haacked"
+  },
+  {
+    "number": 43229,
+    "title": "Allow moving around nodes / adding nodes to joined branch downstream of conditional",
+    "labels": [],
+    "author": "havenbarnes",
+    "closed_at": "2025-12-19T20:55:27Z",
+    "closed_by": "havenbarnes"
+  },
+  {
+    "number": 42405,
+    "title": "Feature Request: Better UX for managing large JSON objects in UI",
+    "labels": [
+      "enhancement",
+      "feature/feature-flags",
+      "team/feature-flags",
+      "ux"
+    ],
+    "author": "luke-belton",
+    "closed_at": "2025-12-19T19:36:55Z",
+    "closed_by": "dustinbyrne"
+  },
+  {
+    "number": 42861,
+    "title": "bug(llma): AI wrappers don't extract model from response when using OpenAI stored prompts",
+    "labels": [
+      "team/llm-analytics"
+    ],
+    "author": "andrewm4894",
+    "closed_at": "2025-12-19T17:26:59Z",
+    "closed_by": "andrewm4894"
+  },
+  {
+    "number": 38168,
+    "title": "Period over period comparison for funnels",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "simfish85",
+    "closed_at": "2025-12-19T16:11:00Z",
+    "closed_by": "HaynesPostHog"
+  },
+  {
+    "number": 7288,
+    "title": "Support \"Path cleaning rules\" in trends & heatmaps",
+    "labels": [
+      "enhancement",
+      "feature/trends",
+      "team/product-analytics"
+    ],
+    "author": "joesaunderson",
+    "closed_at": "2025-12-19T12:19:04Z",
+    "closed_by": "mariusandra"
+  },
+  {
+    "number": 42639,
+    "title": "feature request(surveys): enhance sdk version warnings with supported sdks",
+    "labels": [
+      "enhancement",
+      "feature/surveys"
+    ],
+    "author": "adboio",
+    "closed_at": "2025-12-19T03:47:44Z",
+    "closed_by": "adboio"
+  },
+  {
+    "number": 43657,
+    "title": "Bug: Surveys Cannot read properties of null (reading 'has')",
+    "labels": [
+      "bug",
+      "feature/surveys"
+    ],
+    "author": "clr182",
+    "closed_at": "2025-12-19T03:26:42Z",
+    "closed_by": "adboio"
+  },
+  {
+    "number": 43634,
+    "title": "Bug: When creating insights, selecting an item in the filtering dropdown causes the text to overflow",
+    "labels": [
+      "bug",
+      "feature/property-filters",
+      "feature/insights",
+      "team-devex"
+    ],
+    "author": "HaynesPostHog",
+    "closed_at": "2025-12-19T03:21:36Z",
+    "closed_by": "adboio"
+  },
+  {
+    "number": 43728,
+    "title": "Bug report: Question text overflowing in survey preview",
+    "labels": [
+      "bug",
+      "feature/surveys",
+      "team/surveys"
+    ],
+    "author": "slshults",
+    "closed_at": "2025-12-19T03:18:55Z",
+    "closed_by": "adboio"
+  },
+  {
+    "number": 7874,
+    "title": "Alternate JSON object storage for clickhouse - Arrays evaluation",
+    "labels": [
+      "enhancement",
+      "performance",
+      "clickhouse",
+      "team/analytics-platform"
+    ],
+    "author": "macobo",
+    "closed_at": "2025-12-18T14:48:18Z",
+    "closed_by": "robbie-c"
+  },
+  {
+    "number": 37654,
+    "title": "chore(flags): Include request timestamp in `$feature_flag_called` events",
+    "labels": [
+      "enhancement",
+      "feature/feature-flags",
+      "team/feature-flags"
+    ],
+    "author": "haacked",
+    "closed_at": "2025-12-18T17:06:10Z",
+    "closed_by": "haacked"
+  },
+  {
+    "number": 26923,
+    "title": "Search human readable names for property definitions",
+    "labels": [
+      "enhancement",
+      "feature/data-management",
+      "team/analytics-platform"
+    ],
+    "author": "thmsobrmlr",
+    "closed_at": "2025-12-18T16:04:23Z",
+    "closed_by": "robbie-c"
+  },
+  {
+    "number": 43605,
+    "title": "Bug: Survey opportunity button breaks formatting on smaller insight tiles",
+    "labels": [
+      "bug",
+      "feature/surveys"
+    ],
+    "author": "HaynesPostHog",
+    "closed_at": "2025-12-17T21:28:29Z",
+    "closed_by": "HaynesPostHog"
+  },
+  {
+    "number": 43457,
+    "title": "Bug: Live activity Pause button does not work",
+    "labels": [
+      "bug",
+      "team/platform-features"
+    ],
+    "author": "clr182",
+    "closed_at": "2025-12-17T20:11:07Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 41797,
+    "title": "bug(surveys): When creating a survey, leaving question label empty and trying to create draft leads to confusing UX",
+    "labels": [
+      "bug"
+    ],
+    "author": "lshaowei18",
+    "closed_at": "2025-12-17T02:10:16Z",
+    "closed_by": "adboio"
+  },
+  {
+    "number": 43477,
+    "title": "bug(llma): $ai_input_state and $ai_output_state not displayed in Conversation view for spans",
+    "labels": [
+      "bug",
+      "team/llm-analytics"
+    ],
+    "author": "andrewm4894",
+    "closed_at": "2025-12-16T21:35:26Z",
+    "closed_by": "andrewm4894"
+  },
+  {
+    "number": 40885,
+    "title": "Flags remediation action items",
+    "labels": [],
+    "author": "dmarticus",
+    "closed_at": "2025-12-16T19:21:10Z",
+    "closed_by": "dmarticus"
+  },
+  {
+    "number": 40787,
+    "title": "feat(llma): clustering mvp",
+    "labels": [
+      "team/llm-analytics",
+      "llm-analytics"
+    ],
+    "author": "andrewm4894",
+    "closed_at": "2025-12-03T09:40:48Z",
+    "closed_by": "andrewm4894"
+  },
+  {
+    "number": 41932,
+    "title": "Reword activity event banner in customer analytics dashboard",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2025-12-16T12:53:13Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 40373,
+    "title": "e2e - hobby smoke test does not test the PR",
+    "labels": [
+      "bug"
+    ],
+    "author": "cruftex",
+    "closed_at": "2025-12-16T10:44:15Z",
+    "closed_by": "webjunkie"
+  },
+  {
+    "number": 42119,
+    "title": "Sprint - Dec 1 to Dec 12",
+    "labels": [
+      "sprint"
+    ],
+    "author": "ioannisj",
+    "closed_at": "2025-12-16T08:41:14Z",
+    "closed_by": "marandaneto"
+  },
+  {
+    "number": 39967,
+    "title": "Group canvas",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2025-12-15T19:37:05Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 34974,
+    "title": "Can't click people on page reports 0>",
+    "labels": [
+      "bug",
+      "team/web-analytics"
+    ],
+    "author": "robbie-c",
+    "closed_at": "2025-12-15T17:42:25Z",
+    "closed_by": "lricoy"
+  },
+  {
+    "number": 43156,
+    "title": "Bug: Renaming project gives error",
+    "labels": [
+      "bug",
+      "team/platform-features"
+    ],
+    "author": "clr182",
+    "closed_at": "2025-12-15T09:42:17Z",
+    "closed_by": "a-lider"
+  },
+  {
+    "number": 43228,
+    "title": "Add reply-to, pre-header to SES send mail request",
+    "labels": [],
+    "author": "havenbarnes",
+    "closed_at": "2025-12-12T22:46:38Z",
+    "closed_by": "havenbarnes"
+  },
+  {
+    "number": 41437,
+    "title": "idea(llma): ability to translate any trace on the fly to make it easier to read/understand",
+    "labels": [
+      "team/llm-analytics",
+      "llm-analytics"
+    ],
+    "author": "andrewm4894",
+    "closed_at": "2025-12-12T17:42:23Z",
+    "closed_by": "andrewm4894"
+  },
+  {
+    "number": 42685,
+    "title": "Format urls as links in persons/groups data table",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2025-12-12T15:47:36Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 40574,
+    "title": "Add NotebookNodeZendeskTickets to group feed canvas",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2025-12-12T12:21:16Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 43144,
+    "title": "Static cohorts are created, empty and no creation feedback, eventually processes",
+    "labels": [
+      "bug",
+      "feature/cohorts"
+    ],
+    "author": "kyleswank",
+    "closed_at": "2025-12-12T00:15:28Z",
+    "closed_by": "dustinbyrne"
+  },
+  {
+    "number": 43135,
+    "title": "Bug: LLMA ai_input and ai_output are blank",
+    "labels": [
+      "bug",
+      "team/llm-analytics",
+      "llm-analytics"
+    ],
+    "author": "clr182",
+    "closed_at": "2025-12-11T15:59:47Z",
+    "closed_by": "clr182"
+  },
+  {
+    "number": 39186,
+    "title": "Feature Request: \"This week\", \"Last week\" date range option",
+    "labels": [
+      "enhancement",
+      "team/product-analytics",
+      "feature/insights"
+    ],
+    "author": "HaynesPostHog",
+    "closed_at": "2025-12-11T08:24:00Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 42495,
+    "title": "Static Cohorts Show 0 Users In Cohort On Cohort List Page",
+    "labels": [
+      "bug",
+      "feature/cohorts"
+    ],
+    "author": "kyleswank",
+    "closed_at": "2025-12-10T20:27:05Z",
+    "closed_by": "dustinbyrne"
+  },
+  {
+    "number": 17503,
+    "title": "SOC2 Type 2 Compliance",
+    "labels": [],
+    "author": "annikaschmid",
+    "closed_at": "2025-12-09T22:46:39Z",
+    "closed_by": "jamesefhawkins"
+  },
+  {
+    "number": 42268,
+    "title": "Repositioning of nodes",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "meikelmosby",
+    "closed_at": "2025-12-09T22:17:49Z",
+    "closed_by": "ja-me-sk"
+  },
+  {
+    "number": 40740,
+    "title": "Bug: Legend clicks no longer filtering series",
+    "labels": [
+      "bug",
+      "feature/trends",
+      "team/product-analytics"
+    ],
+    "author": "luke-belton",
+    "closed_at": "2025-12-09T19:37:08Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 42958,
+    "title": "UI Sidebar Problems",
+    "labels": [
+      "bug"
+    ],
+    "author": "NtFelix",
+    "closed_at": "2025-12-09T12:10:57Z",
+    "closed_by": "adamleithp"
+  },
+  {
+    "number": 31117,
+    "title": "Feature request: error tracking support for mobile",
+    "labels": [
+      "enhancement",
+      "feature/error-tracking",
+      "team/error-tracking",
+      "feature/mobile"
+    ],
+    "author": "daibhin",
+    "closed_at": "2025-12-09T10:35:37Z",
+    "closed_by": "marandaneto"
+  },
+  {
+    "number": 30490,
+    "title": "Getting 404 in the server logs of my NextJS app",
+    "labels": [
+      "bug"
+    ],
+    "author": "yafkari",
+    "closed_at": "2025-12-09T10:31:23Z",
+    "closed_by": "yafkari"
+  },
+  {
+    "number": 31978,
+    "title": "Feature Request: Support decimal places in goal lines",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "feature/trends",
+      "team/product-analytics"
+    ],
+    "author": "ordehi",
+    "closed_at": "2025-12-08T22:54:42Z",
+    "closed_by": "darkopia"
+  },
+  {
+    "number": 26175,
+    "title": "Self hosted: Missing funnel UDF functions",
+    "labels": [
+      "bug",
+      "feature/funnels",
+      "team/product-analytics"
+    ],
+    "author": "DogeAmazed",
+    "closed_at": "2025-12-05T20:24:14Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 25936,
+    "title": "Feature request: Warn before deleting cohort that is currently in use",
+    "labels": [
+      "enhancement",
+      "good first issue",
+      "feature/cohorts",
+      "team/feature-flags",
+      "backlog"
+    ],
+    "author": "slshults",
+    "closed_at": "2025-12-05T18:19:54Z",
+    "closed_by": "haacked"
+  },
+  {
+    "number": 42409,
+    "title": "SecurityError: Failed to construct 'Worker': Script at 'https://app-static.eu.posthog.com/static/html.worker.js' cannot be accessed from origin 'https://eu.posthog.com'.",
+    "labels": [
+      "bug",
+      "feature/surveys"
+    ],
+    "author": "posthog",
+    "closed_at": "2025-12-05T16:37:41Z",
+    "closed_by": "lucasheriques"
+  },
+  {
+    "number": 41569,
+    "title": "Cohorts should expose errors to the end-user",
+    "labels": [
+      "feature/cohorts"
+    ],
+    "author": "dustinbyrne",
+    "closed_at": "2025-12-05T15:06:54Z",
+    "closed_by": "dustinbyrne"
+  },
+  {
+    "number": 17003,
+    "title": "Copying HogQL data to clipboard instead of having to export as CSV",
+    "labels": [
+      "enhancement",
+      "team/product-analytics",
+      "feature/insights"
+    ],
+    "author": "omchen",
+    "closed_at": "2025-12-04T21:42:46Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 23115,
+    "title": "IndexError: list index out of range",
+    "labels": [
+      "bug",
+      "team/product-analytics",
+      "support/priority"
+    ],
+    "author": "sentry",
+    "closed_at": "2025-12-04T20:11:04Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 40642,
+    "title": "Filter insights by group key in group feed canvas",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2025-12-04T17:48:02Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 33693,
+    "title": "Bug: Deleted dashboards appearing in projects tree-view",
+    "labels": [
+      "bug",
+      "ui",
+      "team/product-analytics"
+    ],
+    "author": "HaynesPostHog",
+    "closed_at": "2025-12-04T15:54:25Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 23061,
+    "title": "Bug report: `email` property missing from filter dialogs",
+    "labels": [
+      "bug",
+      "feature/property-filters",
+      "team/product-analytics"
+    ],
+    "author": "slshults",
+    "closed_at": "2025-12-04T14:59:02Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 29981,
+    "title": "Feature request (Insights): Display the total when doing a breakdown for an insight",
+    "labels": [
+      "enhancement",
+      "team/product-analytics",
+      "feature/insights"
+    ],
+    "author": "Sriram-bk",
+    "closed_at": "2025-12-04T14:49:21Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 8354,
+    "title": "Show week number and not date for insights grouped by week",
+    "labels": [
+      "enhancement",
+      "team/product-analytics"
+    ],
+    "author": "lsmith77",
+    "closed_at": "2025-12-04T14:47:02Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 29454,
+    "title": "Feature request: Add `quantile` to list of supported ClickHouse functions",
+    "labels": [
+      "enhancement",
+      "clickhouse",
+      "team/product-analytics",
+      "feature/hogql"
+    ],
+    "author": "slshults",
+    "closed_at": "2025-12-04T14:36:32Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 11952,
+    "title": "Track and allow graphing users/groups by \"date first seen\"",
+    "labels": [
+      "enhancement",
+      "feature/trends",
+      "feature/persons",
+      "feature/group-analytics",
+      "team/product-analytics"
+    ],
+    "author": "macobo",
+    "closed_at": "2025-12-04T14:18:25Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 35626,
+    "title": "Feature request: remember filters applied to persons table",
+    "labels": [
+      "enhancement",
+      "feature/persons",
+      "team/product-analytics"
+    ],
+    "author": "abigailbramble",
+    "closed_at": "2025-12-04T13:51:01Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 42238,
+    "title": "Add usage report metric to code",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "abheek9",
+    "closed_at": "2025-12-04T13:05:28Z",
+    "closed_by": "meikelmosby"
+  },
+  {
+    "number": 42643,
+    "title": "Bug report: Annotations missing from time series charts",
+    "labels": [
+      "bug",
+      "feature/annotations",
+      "team/product-analytics",
+      "support/priority"
+    ],
+    "author": "slshults",
+    "closed_at": "2025-12-04T12:45:23Z",
+    "closed_by": "anirudhpillai"
+  },
+  {
+    "number": 39223,
+    "title": "Feature Request: Retention - Allow conditionally formating columns for cohort table",
+    "labels": [
+      "enhancement",
+      "feature/retention",
+      "team/product-analytics"
+    ],
+    "author": "gesh",
+    "closed_at": "2025-12-04T09:30:19Z",
+    "closed_by": "gesh"
+  },
+  {
+    "number": 39225,
+    "title": "Feature Request: Retention - Show the day in cohort table rows",
+    "labels": [
+      "enhancement",
+      "feature/retention",
+      "team/product-analytics"
+    ],
+    "author": "gesh",
+    "closed_at": "2025-12-04T09:26:49Z",
+    "closed_by": "gesh"
+  },
+  {
+    "number": 13002,
+    "title": "Allow arbitrary URL/Path Normalisation ",
+    "labels": [
+      "enhancement",
+      "feature/paths",
+      "feature/data-management",
+      "team/product-analytics",
+      "feature/insights"
+    ],
+    "author": "pauldambra",
+    "closed_at": "2025-12-03T14:50:19Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 41994,
+    "title": "Bug: Group overview dashboard \"Customize\" button throws 500 error and template dashboards don't sync insights",
+    "labels": [
+      "bug",
+      "feature/group-analytics",
+      "team/customer-analytics"
+    ],
+    "author": "ordehi",
+    "closed_at": "2025-12-03T14:43:15Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 40838,
+    "title": "Bug: Customize insights on group page is not working",
+    "labels": [
+      "bug",
+      "feature/saved-insights",
+      "team/product-analytics"
+    ],
+    "author": "clr182",
+    "closed_at": "2025-12-03T14:43:27Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 41131,
+    "title": "Add \"Include time\" option on \"From custom date until now\u2026\" time filter on Dashboards",
+    "labels": [
+      "enhancement",
+      "team/product-analytics"
+    ],
+    "author": "jperezrealini",
+    "closed_at": "2025-12-03T14:29:03Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 41809,
+    "title": "Bug: \"Use person properties from query time\" option not reflected in SQL editor",
+    "labels": [
+      "bug",
+      "feature/trends",
+      "team/product-analytics",
+      "feature/insights"
+    ],
+    "author": "danazou",
+    "closed_at": "2025-12-03T14:25:37Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 42377,
+    "title": "Bug: Group endpoint returning 500 intermittently",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2025-12-03T13:59:20Z",
+    "closed_by": "arthurdedeus"
+  },
+  {
+    "number": 42583,
+    "title": "Dashboard filters mega-issue",
+    "labels": [
+      "team/product-analytics"
+    ],
+    "author": "thmsobrmlr",
+    "closed_at": "2025-12-03T13:57:11Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 28970,
+    "title": "Bug report: SQL wrapper not fully parsing ISO dates",
+    "labels": [
+      "bug",
+      "team/product-analytics",
+      "feature/hogql",
+      "support/priority"
+    ],
+    "author": "slshults",
+    "closed_at": "2025-12-03T13:31:39Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 28981,
+    "title": "User not in cohort filter should work with anonymous events",
+    "labels": [
+      "enhancement",
+      "feature/cohorts",
+      "team/product-analytics",
+      "support/priority",
+      "team/feature-flags"
+    ],
+    "author": "thmsobrmlr",
+    "closed_at": "2025-12-03T13:28:21Z",
+    "closed_by": "thmsobrmlr"
+  },
+  {
+    "number": 29948,
+    "title": "Feature: In-app notification when payments unsuccessful/card expired",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "joethreepwood",
+    "closed_at": "2025-12-03T06:17:33Z",
+    "closed_by": "joethreepwood"
+  },
+  {
+    "number": 41331,
+    "title": "Sprint - Nov 17 to Nov 28",
+    "labels": [
+      "sprint"
+    ],
+    "author": "mariusandra",
+    "closed_at": "2025-12-03T07:34:12Z",
+    "closed_by": "marandaneto"
+  },
+  {
+    "number": 26593,
+    "title": "Feature Request: Self-serve user deletion",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "joethreepwood",
+    "closed_at": "2025-12-03T06:20:24Z",
+    "closed_by": "joethreepwood"
+  },
+  {
+    "number": 30246,
+    "title": "Feature Request: Integrate Max AI for cross-sell",
+    "labels": [
+      "enhancement"
+    ],
+    "author": "joethreepwood",
+    "closed_at": "2025-12-03T06:16:50Z",
+    "closed_by": "joethreepwood"
+  },
+  {
+    "number": 42106,
+    "title": "Use workflow variable values in conditionals",
+    "labels": [],
+    "author": "havenbarnes",
+    "closed_at": "2025-12-02T19:04:22Z",
+    "closed_by": "havenbarnes"
+  },
+  {
+    "number": 39055,
+    "title": "Subscription fail to deliver",
+    "labels": [
+      "sprint",
+      "performance",
+      "team/analytics-platform"
+    ],
+    "author": "andyzzhao",
+    "closed_at": "2025-12-02T16:26:18Z",
+    "closed_by": "andyzzhao"
+  },
+  {
+    "number": 42278,
+    "title": "Bad FF construction",
+    "labels": [],
+    "author": "robbie-c",
+    "closed_at": "2025-12-02T15:37:40Z",
+    "closed_by": "robbie-c"
+  },
+  {
+    "number": 41533,
+    "title": "Customer analytics dashboard",
+    "labels": [],
+    "author": "arthurdedeus",
+    "closed_at": "2025-12-01T12:17:12Z",
+    "closed_by": "arthurdedeus"
+  }
+]
